@@ -11,7 +11,9 @@ public class Navigator {
 
         try {
 
-            // Save current window size
+            // Save stage state
+            boolean isMaximized = stage.isMaximized();
+            boolean isFullScreen = stage.isFullScreen();
             double width = stage.getWidth();
             double height = stage.getHeight();
 
@@ -30,9 +32,15 @@ public class Navigator {
 
             stage.setScene(scene);
 
-            // Restore previous window size
-            stage.setWidth(width);
-            stage.setHeight(height);
+            // Restore stage state
+            if (isFullScreen) {
+                stage.setFullScreen(true);
+            } else if (isMaximized) {
+                stage.setMaximized(true);
+            } else {
+                stage.setWidth(width);
+                stage.setHeight(height);
+            }
 
             stage.show();
 
