@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.studybuddy.controller.QuizResultController"
+      alignment="CENTER"
+      spacing="25"
+      style="-fx-padding:40">
+
+    <Label fx:id="scoreLabel"
+           style="-fx-font-size:26px"/>
+
+    <Label fx:id="feedbackLabel"/>
+
+    <PieChart fx:id="resultChart"/>
+
+    <Button text="Back to Dashboard"
+            onAction="#goToDashboard"/>
+
+</VBox>

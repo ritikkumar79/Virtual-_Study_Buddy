@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.studybuddy.controller.QuizSetupController"
+      alignment="CENTER"
+      spacing="25"
+      styleClass="quiz-setup-root">
+
+    <Label text="🧠 Smart Quiz Setup"
+           styleClass="quiz-title"/>
+
+    <ComboBox fx:id="subjectBox"
+              promptText="Select Subject"
+              styleClass="quiz-input"/>
+
+    <ComboBox fx:id="difficultyBox"
+              promptText="Select Difficulty"
+              styleClass="quiz-input"/>
+
+    <Spinner fx:id="questionCount"
+             prefWidth="200"
+             styleClass="quiz-input"/>
+
+    <Button text="Start Quiz"
+            onAction="#startQuiz"
+            styleClass="quiz-start-btn"/>
+
+    <Button text="⬅ Back to Dashboard"
+            onAction="#goToDashboard"
+            styleClass="quiz-back-btn"/>
+
+</VBox>

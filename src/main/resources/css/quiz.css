@@ -1,0 +1,133 @@
+.quiz-root{
+
+    -fx-background-color: linear-gradient(to right,#141e30,#243b55);
+
+}
+
+.quiz-header{
+
+    -fx-padding:20;
+    -fx-background-color: rgba(0,0,0,0.4);
+
+}
+
+.quiz-title{
+
+    -fx-font-size:24px;
+    -fx-font-weight:bold;
+    -fx-text-fill:white;
+
+}
+
+.timer{
+
+    -fx-font-size:18px;
+    -fx-text-fill:#00e6ff;
+
+}
+
+.quiz-container{
+
+    -fx-padding:40;
+    -fx-max-width:600;
+
+}
+
+.progress-label{
+
+    -fx-text-fill:white;
+    -fx-font-size:14px;
+
+}
+
+.question-text{
+
+    -fx-font-size:18px;
+    -fx-text-fill:white;
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-padding:20;
+    -fx-background-radius:10;
+
+}
+
+.option-btn{
+
+    -fx-text-fill:white;
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-padding:10 20;
+    -fx-background-radius:8;
+
+}
+
+.option-btn:hover{
+
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-cursor:hand;
+
+}
+
+.next-btn{
+
+    -fx-background-color:#00c6ff;
+    -fx-text-fill:white;
+    -fx-font-size:14px;
+    -fx-background-radius:10;
+    -fx-padding:10 20;
+
+}
+
+.next-btn:hover{
+
+    -fx-background-color:#0072ff;
+
+}
+
+.back-btn{
+
+    -fx-background-color:transparent;
+    -fx-text-fill:white;
+    -fx-font-size:14px;
+
+}
+.quiz-root{
+    -fx-background-color: linear-gradient(to right,#141E30,#243B55);
+}
+
+.quiz-setup-root{
+    -fx-background-color: linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    -fx-padding:50;
+}
+
+.quiz-title{
+    -fx-font-size:28px;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.quiz-input{
+    -fx-pref-width:220;
+}
+
+.quiz-start-btn{
+    -fx-background-color:#00c6ff;
+    -fx-text-fill:white;
+    -fx-font-size:14px;
+    -fx-padding:10 25;
+    -fx-background-radius:20;
+}
+
+.quiz-start-btn:hover{
+    -fx-background-color:#0072ff;
+}
+
+.quiz-back-btn{
+    -fx-background-color:transparent;
+    -fx-text-fill:white;
+}
+
+.timer-badge{
+    -fx-background-color:#ff4b5c;
+    -fx-text-fill:white;
+    -fx-padding:5 12;
+    -fx-background-radius:20;
+}

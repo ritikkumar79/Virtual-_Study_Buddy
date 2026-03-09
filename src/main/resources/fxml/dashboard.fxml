@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:id="root"
+            fx:controller="com.studybuddy.controller.DashboardController"
+            styleClass="dashboard-root">
+
+    <!-- SIDEBAR -->
+
+    <left>
+        <VBox fx:id="sidebar" spacing="18" styleClass="sidebar">
+
+            <Label text="STUDY BUDDY" styleClass="logo"/>
+
+            <Button text="🏠 Dashboard" styleClass="menu-btn"/>
+
+         
+
+            <Button text="📚 Study Planner"
+                    onAction="#openStudyPlanner"
+                    styleClass="menu-btn"/>
+
+            <Button text="🤖 AI Assistant"
+                    onAction="#openAIPage"
+                    styleClass="menu-btn"/>
+
+                    <Button text="📊 Analytics"
+        onAction="#openAnalytics"
+        styleClass="menu-btn"/>
+
+            
+        <Button text="📝 Notes" 
+        onAction="#openNotesPage" 
+        styleClass="menu-btn"/>
+
+        <Button text="🧠 QuizView"
+        onAction="#openQuizPage"
+        styleClass="menu-btn"/>
+
+        <Button text="🧠 Quiz"
+        onAction="#openQuizSetup"
+        styleClass="menu-btn"/>
+            <Button text="⚙ Settings" styleClass="menu-btn"/>
+
+        </VBox>
+    </left>
+
+
+    <!-- TOPBAR -->
+
+    <top>
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              styleClass="topbar">
+
+            <Button text="☰"
+                    onAction="#toggleSidebar"
+                    styleClass="menu-toggle"/>
+
+            <TextField promptText="Search..."
+                       styleClass="search-field"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button text="🌙"
+                    onAction="#toggleTheme"
+                    styleClass="menu-toggle"/>
+
+            <Label fx:id="welcomeLabel"
+       styleClass="top-text"/>
+                      <Button text="Logout"
+        onAction="#handleLogout"
+        styleClass="logout-btn"/>
+
+        </HBox>
+
+    </top>
+
+
+    <!-- MAIN CONTENT -->
+
+    <center>
+
+        <VBox spacing="30" styleClass="content">
+
+            <Label text="Dashboard Overview"
+                   styleClass="dashboard-title"/>
+
+            <!-- STAT CARDS -->
+
+            <HBox spacing="25">
+
+                <VBox fx:id="card1" spacing="10" styleClass="stat-card blue">
+
+                    <Label text="Study Time"/>
+                    <Label text="5h Today" styleClass="stat-value"/>
+
+                </VBox>
+
+                <VBox fx:id="card2" spacing="10" styleClass="stat-card purple">
+
+                    <Label text="Tasks Completed"/>
+                    <Label text="8 Tasks" styleClass="stat-value"/>
+
+                </VBox>
+
+                <VBox fx:id="card3" spacing="10" styleClass="stat-card green">
+
+                    <Label text="AI Suggestion"/>
+                    <Label text="Revise Machine Learning"
+                           wrapText="true"
+                           styleClass="stat-value"/>
+
+                </VBox>
+
+            </HBox>
+
+
+            <!-- CHART -->
+
+            <LineChart fx:id="studyChart"
+                       prefHeight="300">
+
+                <xAxis>
+                    <CategoryAxis label="Day"/>
+                </xAxis>
+
+                <yAxis>
+                    <NumberAxis label="Study Hours"/>
+                </yAxis>
+
+            </LineChart>
+
+
+            <!-- WIDGET AREA -->
+
+            <HBox spacing="25">
+
+                <!-- POMODORO TIMER -->
+
+                <VBox spacing="10" styleClass="glass-card">
+
+                    <Label text="Pomodoro Timer"
+                           styleClass="widget-title"/>
+
+                    <Label fx:id="timerLabel"
+                           text="25:00"
+                           styleClass="timer-text"/>
+
+                    <HBox spacing="10">
+
+                        <Button text="Start"
+                                onAction="#startTimer"
+                                styleClass="primary-btn"/>
+
+                        <Button text="Reset"
+                                onAction="#resetTimer"
+                                styleClass="primary-btn"/>
+
+                    </HBox>
+
+                </VBox>
+
+
+                <!-- AI RECOMMENDATION -->
+
+                <VBox spacing="10" styleClass="glass-card">
+
+                    <Label text="AI Recommendation"
+                           styleClass="widget-title"/>
+
+                    <Label text="Focus on Machine Learning today. Try solving 3 coding problems."
+                           wrapText="true"/>
+
+                </VBox>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

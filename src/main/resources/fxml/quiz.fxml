@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studybuddy.controller.QuizController">
+
+    <top>
+
+        <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-padding:20">
+
+            <Label text="Smart Quiz"
+                   style="-fx-font-size:22px"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label fx:id="timerLabel"
+                   text="30s"/>
+
+        </HBox>
+
+    </top>
+
+
+    <center>
+
+        <VBox spacing="25"
+              alignment="CENTER"
+              style="-fx-padding:40">
+
+            <ProgressBar fx:id="progressBar"
+                         prefWidth="400"/>
+
+            <Label fx:id="questionLabel"
+                   wrapText="true"
+                   style="-fx-font-size:18px"/>
+
+            <VBox spacing="15">
+
+                <RadioButton fx:id="option1"/>
+                <RadioButton fx:id="option2"/>
+                <RadioButton fx:id="option3"/>
+                <RadioButton fx:id="option4"/>
+
+            </VBox>
+
+            <Button text="Next"
+                    onAction="#nextQuestion"/>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

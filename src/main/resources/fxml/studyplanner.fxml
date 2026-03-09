@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studybuddy.controller.StudyPlannerController"
+            styleClass="planner-root">
+
+    <!-- HEADER -->
+
+    <top>
+       <HBox spacing="20"
+             alignment="CENTER_LEFT"
+             styleClass="planner-header">
+
+            <Button text="⬅ Dashboard"
+                    onAction="#goToDashboard"
+                    styleClass="back-btn"/>
+
+            <Label text="📅 Study Planner"
+                   styleClass="planner-title"/>
+
+        </HBox>
+    </top>
+
+
+    <!-- MAIN AREA -->
+
+    <center>
+
+        <VBox spacing="25"
+              styleClass="planner-main">
+
+            <!-- STATS -->
+
+            <HBox spacing="20">
+
+                <VBox styleClass="stat-card">
+
+                    <Label text="Today's Tasks"/>
+                    <Label fx:id="totalTasksLabel"
+                           text="0"
+                           styleClass="stat-value"/>
+
+                </VBox>
+
+                <VBox styleClass="stat-card">
+
+                    <Label text="Completed"/>
+                    <Label fx:id="completedTasksLabel"
+                           text="0"
+                           styleClass="stat-value"/>
+
+                </VBox>
+
+                <VBox styleClass="stat-card">
+
+                    <Label text="Study Hours"/>
+                    <Label fx:id="studyHoursLabel"
+                           text="0h"
+                           styleClass="stat-value"/>
+
+                </VBox>
+
+            </HBox>
+
+
+            <!-- MAIN CONTENT -->
+
+            <HBox spacing="25">
+
+                <!-- CHART -->
+
+                <VBox spacing="10"
+                      styleClass="planner-widget"
+                      prefWidth="350">
+
+                    <Label text="Weekly Study Progress"
+                           styleClass="panel-title"/>
+
+                    <LineChart fx:id="studyChart"
+                               prefHeight="250">
+
+                        <xAxis>
+                            <CategoryAxis label="Day"/>
+                        </xAxis>
+
+                        <yAxis>
+                            <NumberAxis label="Hours"/>
+                        </yAxis>
+
+                    </LineChart>
+
+                </VBox>
+
+
+                <!-- ADD TASK -->
+
+                <VBox spacing="15"
+                      styleClass="task-input-panel"
+                      prefWidth="300"
+                      HBox.hgrow="ALWAYS">
+
+                    <Label text="Add Study Task"
+                           styleClass="panel-title"/>
+
+                    <TextField fx:id="subjectField"
+                               promptText="Subject"
+                               maxWidth="Infinity"/>
+
+                    <TextField fx:id="topicField"
+                               promptText="Topic"
+                               maxWidth="Infinity"/>
+
+                    <!-- NEW ML INPUT -->
+
+                    <ComboBox fx:id="difficultyBox"
+                              promptText="Difficulty (1-5)"
+                              maxWidth="Infinity"/>
+
+                    <TextField fx:id="studyHoursField"
+                               promptText="Study Hours"
+                               maxWidth="Infinity"/>
+
+                    <DatePicker fx:id="datePicker"
+                                maxWidth="Infinity"/>
+
+                    <Button text="Add Task"
+                            onAction="#addTask"
+                            styleClass="add-task-btn"/>
+
+                </VBox>
+
+
+                <!-- TASK LIST -->
+
+                <ScrollPane fitToWidth="true"
+                            prefWidth="300"
+                            HBox.hgrow="ALWAYS">
+
+                    <content>
+
+                        <VBox spacing="15"
+                              fx:id="taskContainer"
+                              styleClass="task-list-panel">
+
+                            <Label text="Today's Tasks"
+                                   styleClass="panel-title"/>
+
+                        </VBox>
+
+                    </content>
+
+                </ScrollPane>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

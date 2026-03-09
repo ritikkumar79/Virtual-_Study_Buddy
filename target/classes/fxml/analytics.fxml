@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studybuddy.controller.AnalyticsController"
+            styleClass="analytics-root">
+
+    <!-- HEADER -->
+
+    <top>
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              styleClass="analytics-header">
+
+            <Button text="⬅ Dashboard"
+                    onAction="#goToDashboard"
+                    styleClass="back-btn"/>
+
+            <Label text="📊 Study Analytics"
+                   styleClass="analytics-title"/>
+
+        </HBox>
+
+    </top>
+
+
+    <!-- MAIN CONTENT -->
+
+    <center>
+
+        <VBox spacing="30"
+              alignment="CENTER"
+              styleClass="analytics-content">
+
+            <!-- STAT CARDS -->
+
+            <HBox spacing="25">
+
+                <VBox styleClass="stat-card blue">
+
+                    <Label text="Productivity"/>
+                    <Label fx:id="productivityLabel"
+                           text="0%"
+                           styleClass="stat-value"/>
+
+                </VBox>
+
+                <VBox styleClass="stat-card purple">
+
+                    <Label text="Total Tasks"/>
+                    <Label fx:id="totalTasksLabel"
+                           text="0"
+                           styleClass="stat-value"/>
+
+                </VBox>
+
+                <VBox styleClass="stat-card green">
+
+                    <Label text="Completed"/>
+                    <Label fx:id="completedTasksLabel"
+                           text="0"
+                           styleClass="stat-value"/>
+
+                </VBox>
+
+            </HBox>
+
+
+            <!-- CHARTS -->
+
+            <HBox spacing="30">
+
+                <VBox spacing="10"
+                      styleClass="glass-card">
+
+                    <Label text="Subject Distribution"
+                           styleClass="widget-title"/>
+
+                    <PieChart fx:id="subjectChart"
+                              prefHeight="300"/>
+
+                </VBox>
+
+
+                <VBox spacing="10"
+                      styleClass="glass-card">
+
+                    <Label text="Weekly Study Progress"
+                           styleClass="widget-title"/>
+
+                    <LineChart fx:id="weeklyChart"
+                               prefHeight="300">
+
+                        <xAxis>
+                            <CategoryAxis label="Day"/>
+                        </xAxis>
+
+                        <yAxis>
+                            <NumberAxis label="Hours"/>
+                        </yAxis>
+
+                    </LineChart>
+
+                </VBox>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

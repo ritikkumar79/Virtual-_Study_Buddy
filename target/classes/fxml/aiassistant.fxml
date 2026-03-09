@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studybuddy.controller.AIAssistantController"
+            styleClass="ai-root">
+
+    <!-- HEADER -->
+
+    <top>
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              styleClass="ai-header">
+
+            <Button text="⬅ Dashboard"
+                    onAction="#goToDashboard"
+                    styleClass="back-btn"/>
+
+            <Label text="🤖 AI Study Assistant"
+                   styleClass="ai-title"/>
+
+        </HBox>
+
+    </top>
+
+
+    <!-- MAIN AREA -->
+
+    <center>
+
+        <VBox spacing="30"
+              alignment="TOP_CENTER"
+              styleClass="ai-content">
+
+            <!-- INTRO CARD -->
+
+            <VBox spacing="10"
+                  alignment="CENTER"
+                  styleClass="ai-intro-card">
+
+                <Label text="Smart Study Recommendations"
+                       styleClass="ai-subtitle"/>
+
+                <Label text="Click the button to get personalized study suggestions."
+                       styleClass="ai-desc"
+                       wrapText="true"/>
+
+                <Button text="Generate Recommendation"
+                        onAction="#generateRecommendation"
+                        styleClass="ai-btn"/>
+
+            </VBox>
+
+
+            <!-- RECOMMENDATIONS -->
+
+            <VBox fx:id="recommendationBox"
+                  spacing="15"
+                  styleClass="recommendation-box">
+
+            </VBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

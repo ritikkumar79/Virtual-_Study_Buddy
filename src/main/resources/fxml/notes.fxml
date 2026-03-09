@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studybuddy.controller.NotesController"
+            styleClass="notes-root">
+
+    <!-- HEADER -->
+
+    <top>
+
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="notes-header">
+
+            <Button text="⬅ Dashboard"
+                    onAction="#goToDashboard"
+                    styleClass="back-btn"/>
+
+            <Label text="📝 Smart Study Notes"
+                   styleClass="notes-title"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <TextField fx:id="searchField"
+                       promptText="Search notes..."
+                       onKeyReleased="#searchNotes"
+                       styleClass="search-field"/>
+
+        </HBox>
+
+    </top>
+
+
+    <!-- MAIN -->
+
+    <center>
+
+        <VBox spacing="20" styleClass="notes-main">
+
+            <!-- STATISTICS -->
+
+            <HBox spacing="20">
+
+                <Label fx:id="totalNotesLabel"
+                       text="Total Notes: 0"/>
+
+                <Label fx:id="pinnedNotesLabel"
+                       text="Pinned: 0"/>
+
+            </HBox>
+
+
+            <!-- CREATE NOTE -->
+
+            <VBox spacing="10" styleClass="note-create-card">
+
+                <TextField fx:id="titleField"
+                           promptText="Note Title"/>
+
+                <TextField fx:id="subjectField"
+                           promptText="Subject Tag (Java, ML, etc)"/>
+
+                <TextArea fx:id="contentArea"
+                          promptText="Write your notes here..."
+                          prefHeight="120"/>
+
+                <HBox spacing="10">
+
+                    <Button text="Save Note"
+                            onAction="#saveNote"
+                            styleClass="save-btn"/>
+
+                    <Button text="AI Summary"
+                            onAction="#generateSummary"
+                            styleClass="ai-btn"/>
+
+                </HBox>
+
+            </VBox>
+
+
+            <!-- NOTES LIST -->
+
+            <ScrollPane fitToWidth="true">
+
+                <content>
+
+                    <VBox fx:id="notesContainer"
+                          spacing="15"/>
+
+                </content>
+
+            </ScrollPane>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

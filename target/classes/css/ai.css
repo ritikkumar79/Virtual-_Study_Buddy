@@ -1,0 +1,144 @@
+.ai-root{
+
+-fx-background-color:linear-gradient(to right,#0f172a,#020617);
+
+}
+
+
+/* HEADER */
+
+.ai-header{
+
+-fx-padding:20;
+
+}
+
+
+/* TITLE */
+
+.ai-title{
+
+-fx-font-size:28px;
+
+-fx-text-fill:white;
+
+-fx-font-weight:bold;
+
+}
+
+
+/* INTRO CARD */
+
+.ai-intro-card{
+
+-fx-background-color:#1e293b;
+
+-fx-padding:25;
+
+-fx-background-radius:15;
+
+-fx-effect:dropshadow(gaussian,rgba(0,0,0,0.4),20,0,0,5);
+
+}
+
+
+/* SUBTITLE */
+
+.ai-subtitle{
+
+-fx-font-size:20px;
+
+-fx-text-fill:white;
+
+-fx-font-weight:bold;
+
+}
+
+
+/* DESCRIPTION */
+
+.ai-desc{
+
+-fx-text-fill:#cbd5f5;
+
+}
+
+
+/* BUTTON */
+
+.ai-btn{
+
+-fx-background-color:linear-gradient(to right,#06b6d4,#3b82f6);
+
+-fx-text-fill:white;
+
+-fx-font-size:14px;
+
+-fx-background-radius:10;
+
+-fx-padding:8 20;
+
+}
+
+.ai-btn:hover{
+
+-fx-scale-x:1.05;
+-fx-scale-y:1.05;
+
+}
+
+
+/* RECOMMENDATION BOX */
+
+.recommendation-box{
+
+-fx-padding:10;
+
+}
+
+
+/* RECOMMENDATION CARD */
+
+.ai-rec-card{
+
+-fx-background-color:#334155;
+
+-fx-padding:15;
+
+-fx-background-radius:10;
+
+-fx-effect:dropshadow(gaussian,rgba(0,0,0,0.4),15,0,0,5);
+
+}
+
+
+/* TEXT */
+
+.ai-rec{
+
+-fx-text-fill:white;
+
+-fx-font-size:14px;
+
+}
+
+
+/* BACK BUTTON */
+
+.back-btn{
+
+-fx-background-color:#1e293b;
+
+-fx-text-fill:white;
+
+-fx-background-radius:8;
+
+-fx-padding:6 12;
+
+}
+
+.back-btn:hover{
+
+-fx-background-color:#334155;
+
+}

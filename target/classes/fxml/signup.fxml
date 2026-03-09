@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studybuddy.controller.SignupController"
+            styleClass="root">
+
+    <center>
+
+        <StackPane>
+
+            <VBox alignment="CENTER"
+                  spacing="20"
+                  styleClass="login-card">
+
+                <Label text="Create Account"
+                       styleClass="login-title"/>
+
+                <TextField fx:id="nameField"
+                           promptText="Full Name"
+                           styleClass="input"/>
+
+                <TextField fx:id="emailField"
+                           promptText="Email Address"
+                           styleClass="input"/>
+
+                <PasswordField fx:id="passwordField"
+                               promptText="Password"
+                               styleClass="input"/>
+
+                <Button text="Sign Up"
+                        styleClass="login-btn"
+                        onAction="#handleSignup"/>
+
+                <Label text="Already have account? Login"
+                       onMouseClicked="#goToLogin"
+                       styleClass="link"/>
+
+                <Label fx:id="statusLabel"
+                       textFill="red"/>
+
+            </VBox>
+
+        </StackPane>
+
+    </center>
+
+</BorderPane>
